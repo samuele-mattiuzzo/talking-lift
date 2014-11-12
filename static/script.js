@@ -1,5 +1,6 @@
 var div = document.getElementById('shit'),
     play_status = document.getElementById('play_status'),
+    audio = new Audio(),
     timer = 10000;
 
 function scramble(){
@@ -15,7 +16,9 @@ function talking_lift(){
         div.innerHTML = things[thing];
 
         if (play_status.className === 'play') {
-            var audio = new Audio(audio_things[thing]);
+            audio.src = audio_things[thing];
+            audio.pause();
+            audio.load();
             audio.play();
         }
     }, timer);
@@ -23,8 +26,8 @@ function talking_lift(){
 
 function mute_sounds(){
     var is_muted = (play_status.className === 'mute') ? true : false;
-    //audio.forEach(function(audio_element) { audio_element.muted = !is_muted; });
     play_status.className = (is_muted === false) ? 'mute' : 'play';
+    if (is_muted === true) { audio.pause(); audio.src = ''; }
 }
 play_status.addEventListener('click', function (event) {
   mute_sounds();
