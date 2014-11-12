@@ -18,6 +18,9 @@ span {
     display: block;
     margin-top: 1.5em;}
 
+.tweet {
+    margin-left: 47%;}
+
 a:link, a:hover, a:visited, a:active { text-decoration: none; }
 
 /* Sound controls */
