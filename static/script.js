@@ -1,5 +1,4 @@
 var div = document.getElementById('shit'),
-    audio = document.getElementById('audio'),
     play_status = document.getElementById('play_status'),
     timer = 5000;
 
@@ -14,8 +13,11 @@ function talking_lift(){
         // Plays the corresponding sound
         thing = scramble();
         div.innerHTML = things[thing];
-        //audio[thing].play();
 
+        if (play_status.className === 'play') {
+            var audio = new Audio(audio_things[thing]);
+            audio.play();
+        }
     }, timer);
 }
 
