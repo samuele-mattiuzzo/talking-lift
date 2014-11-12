@@ -1,15 +1,21 @@
 <html>  
   <head>
-    <link rel='stylesheet' href='{{ css_url }}'></link>
+    <link rel="stylesheet" 
+          href="{{ url_for('static', filename='style.css')}}"></link>
   </head>
   <body>
       <section>
         <span id='shit'></span>
       </section>
   </body>
-  <script src="{{ js_url }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  
   <script type="text/javascript">
-    var things = {{ things|safe }};
+    var span_id = "shit",
+        things = {{ things|safe }},
+        audio_things = {{ audio_things|safe }},
+        timer = 5000,
+        audio_url = "{{ url_root }}" + "{{ audio_url }}";
     talking_lift();
   </script>
 </html>
