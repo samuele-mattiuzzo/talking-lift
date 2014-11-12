@@ -21,5 +21,5 @@ def lift():
     return render_template(
         'index.html',
         things=json.dumps(things),
-        audio_things=audio_files,
+        audio_things=json.dumps(audio_files),
         year=date.today().year)

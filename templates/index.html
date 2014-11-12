@@ -12,17 +12,15 @@
       <span id="footer">&copy; {{ year }} | Samuele Mattiuzzo</span>
       
       <audio>
-        {% for audio_thing in audio_things %}
-          {# audio_thing is the full resource url #}
-          <source src="{{ audio_thing }}" type="audio/mpeg">
-        {% endfor %}
+        <!-- used as a sentinel -->
         Your browser does not support audio elements.
       </audio>
   </body>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
   <script type="text/javascript">
-    var things = {{ things|safe }};
+    var things = {{ things|safe }},
+        audio_things = {{ audio_things|safe }};
     talking_lift();
   </script>
 </html>
