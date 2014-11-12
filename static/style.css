@@ -1,13 +1,19 @@
 body {
-    background: black }
-
-section {
+    font-family: "Arial";
+    font-size: 2em;
     background: white;
     color: black;
-    border-radius: 1em;
-    padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) }
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 850px;
+    text-align: center;
+    width: 80%;}
+
+section {
+    margin-bottom: 2em;
+    font-size: 200%;
+    margin: .25em;}
+
+section span {
+    display: block;
+    margin-top: 1.5em;}
