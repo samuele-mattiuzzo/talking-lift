@@ -6,7 +6,8 @@
   
   <body>
       <section>
-        <span id='shit'></span>
+        <a id="play_status" class="play" href="#"></a>
+        <span id="shit"></span>
       </section>
       
       <audio>
@@ -20,9 +21,7 @@
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
   <script type="text/javascript">
-    var span_id = "shit",
-        things = {{ things|safe }},
-        timer = 5000;
+    var things = {{ things|safe }};
     talking_lift();
   </script>
 </html>
