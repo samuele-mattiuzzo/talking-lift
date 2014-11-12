@@ -5,7 +5,8 @@ function scramble(){
 
 function talking_lift(){
     var thing,
-        div;
+        div,
+        audio = document.getElementById('audio');
 
     setInterval(function(){
         
@@ -14,11 +15,10 @@ function talking_lift(){
         thing = scramble();
         div = document.getElementById(span_id);
         div.innerHTML = things[thing];
-
-        // TODO: enable + replace this once audio files are ready
-        //var audio = new Audio(audio_things[thing]);
-        var audio = new Audio(audio_url);
-        audio.play();
+        audio[thing].play();
 
     }, timer);
 }
+
+function mute_sounds(){}
+function enable_sounds(){}

@@ -1,21 +1,28 @@
 <html>  
   <head>
-    <link rel="stylesheet" 
-          href="{{ url_for('static', filename='style.css')}}"></link>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"></link>
+    <title>The lift</title>
   </head>
+  
   <body>
       <section>
         <span id='shit'></span>
       </section>
+      
+      <audio>
+        {% for audio_thing in audio_things %}
+          {# audio_thing is the full resource url #}
+          <source src="{{ audio_thing }}" type="audio/mpeg">
+        {% endfor %}
+        Your browser does not support audio elements.
+      </audio>
   </body>
+
   <script src="{{ url_for('static', filename='script.js') }}"></script>
-  
   <script type="text/javascript">
     var span_id = "shit",
         things = {{ things|safe }},
-        audio_things = {{ audio_things|safe }},
-        timer = 5000,
-        audio_url = "{{ url_root }}" + "{{ audio_url }}";
+        timer = 5000;
     talking_lift();
   </script>
 </html>
