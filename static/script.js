@@ -1,6 +1,6 @@
 var div = document.getElementById('shit'),
     play_status = document.getElementById('play_status'),
-    timer = 5000;
+    timer = 10000;
 
 function scramble(){
     // Picks a random number
