@@ -23,3 +23,13 @@ def lift():
         things=json.dumps(things),
         audio_things=json.dumps(audio_files),
         year=date.today().year)
+
+
+@app.route('/random')
+def random_lift():
+    ''' Used to get a random mp3 file for external calls '''
+    things = list(FLOORS) + list(MOVEMENT) + list(DOORS)
+
+
+    return things
+

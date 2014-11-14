@@ -21,11 +21,4 @@ span {
 .tweet {
     margin-left: 47%;}
 
-a:link, a:hover, a:visited, a:active { text-decoration: none; }
-
-/* Sound controls */
-.play{ color: green; }
-.play:after { content: "⊕"; }
-
-.mute { color: red; }
-.mute:after { content: "⊗"; }
+a:link, a:hover, a:visited, a:active { text-decoration: none;  color: inherit; }

@@ -1,21 +1,20 @@
-<html>  
+<html>
   <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"></link>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" media="all"></link>
+    <link rel="stylesheet" href="{{ url_for('static', filename='whhg/whhg.css')}}" media="all"></link>
     <title>The lift</title>
   </head>
-  
+
   <body>
       <section>
-        <a id="play_status" class="play" href="#"></a>
+        <i id="play_status" class="icon-volume-up"></i>
+        <a href="http://github.com/samuele-mattiuzzo/talking-lift">
+          <i class="icon-github"></i>
+        </a>
         <span id="shit">WELCOME TO THE LIFT</span>
       </section>
       <span id="footer">&copy; {{ year }} | Samuele Mattiuzzo</span>
-
-      <audio>
-        <!-- used as a sentinel -->
-        Your browser does not support audio elements.
-      </audio>
-
+      <audio>Your browser does not support audio elements.</audio>
       <span class='tweet'>
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://talking-lift.herokuapp.com/" data-text="Miss your office lift's annoying voice? Worry not, have mine!" data-via="smattiuz">Tweet</a>
       </span>
